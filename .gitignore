@@ -13,3 +13,5 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+internal/api/slurp/slurp_grpc.pb.go
+internal/api/slurp/slurp.pb.go

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominichamon/slurp/internal/api/slurp";
+
+package slurp;
+
+message AddressesRequest {}
+
+message AddressesResponse {
+    repeated string address = 1;
+}
+
+message GroupsRequest {
+    string server = 1;
+}
+
+message GroupsResponse {
+    repeated string group = 1;
+}
+
+service Slurp {
+    // Get the list of addresses of connected news servers.
+    rpc Addresses(AddressesRequest) returns (AddressesResponse) {}
+
+    // Get the list of available groups.
+    rpc Groups(GroupsRequest) returns (GroupsResponse) {}
+}
